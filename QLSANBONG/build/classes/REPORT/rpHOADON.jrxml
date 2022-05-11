@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="57bd383e-8e27-48a6-a925-dfb581379f33">
+	<property name="ireport.zoom" value="1.9487171000000039"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1" uuid="29cffc4a-9c15-4a78-9369-ff8cf986fe8c"/>
+	<parameter name="MAHD" class="java.lang.String"/>
+	<parameter name="HOTENKHACH" class="java.lang.String"/>
+	<parameter name="NGAYGIOTHUE" class="java.lang.String"/>
+	<parameter name="HOTENNV" class="java.lang.String"/>
+	<parameter name="MASAN" class="java.lang.String"/>
+	<parameter name="GIATHEOGIO" class="java.lang.String"/>
+	<parameter name="GIOTRA" class="java.lang.String"/>
+	<parameter name="SOGIOTHUE" class="java.lang.String"/>
+	<parameter name="TIENTHUESAN" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="163" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="38" uuid="bc084f4a-e77f-4aff-8b31-f50b71077441"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HÓA ĐƠN THUÊ SÂN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="38" width="141" height="23" uuid="2b3c5c08-957d-44c8-97bf-15d030e3de05"/>
+				<textElement>
+					<font fontName="Times New Roman" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mã hóa đơn   :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="61" width="141" height="23" uuid="d336edca-2fec-4c59-9da6-c3b99ae89b44"/>
+				<textElement>
+					<font fontName="Times New Roman" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Khách thuê    :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="84" width="141" height="23" uuid="4916dfee-020a-4cda-8e69-0557544285f4"/>
+				<textElement>
+					<font fontName="Times New Roman" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ngày giờ thuê:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="107" width="141" height="23" uuid="5bc196e0-9023-41f5-8af7-0c1c7f0750b9"/>
+				<textElement>
+					<font fontName="Times New Roman" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nhân viên phục vụ:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="141" y="38" width="387" height="23" uuid="e47b2b96-9c1a-4ff1-9eca-841b4cd097a3"/>
+				<textElement>
+					<font fontName="Times New Roman" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{MAHD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="61" width="387" height="23" uuid="405bd363-da8c-43a4-84da-e0a15e1de663"/>
+				<textElement>
+					<font fontName="Times New Roman" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{HOTENKHACH}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="84" width="387" height="23" uuid="081d691c-c2ba-4511-bd02-516b1a5d71b7"/>
+				<textElement>
+					<font fontName="Times New Roman" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NGAYGIOTHUE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="107" width="387" height="23" uuid="a5a121f1-9e64-4d5d-9a61-580294ccd160"/>
+				<textElement>
+					<font fontName="Times New Roman" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{HOTENNV}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="143" width="555" height="20" uuid="f901eaf2-5a71-4114-b25e-7f4d345ebe2d"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[-----------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="189" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="23" width="555" height="42" uuid="6829ca15-6396-4290-8e9e-33a37a8ea60f"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="dataset1" uuid="a1b30ade-ba62-4da4-bfa2-5cb566e74768">
+						<datasetParameter name="MASAN">
+							<datasetParameterExpression><![CDATA[$P{MASAN}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="GIATHEOGIO">
+							<datasetParameterExpression><![CDATA[$P{GIATHEOGIO}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="SOGIOTHUE">
+							<datasetParameterExpression><![CDATA[$P{SOGIOTHUE}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="TIENTHUESAN">
+							<datasetParameterExpression><![CDATA[$P{TIENTHUESAN}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="GIOTRA">
+							<datasetParameterExpression><![CDATA[$P{GIOTRA}]]></datasetParameterExpression>
+						</datasetParameter>
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource(1)]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="42" width="555">
+						<textField>
+							<reportElement x="0" y="0" width="116" height="22" uuid="944fd2f1-c98f-4ad7-864d-6d2abd8ff2e9"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font size="12"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{MASAN}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="0" y="22" width="116" height="20" uuid="b38da699-09f5-4c60-a52d-8398fb70db9a"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle"/>
+							<textFieldExpression><![CDATA[$P{GIATHEOGIO}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="116" y="0" width="151" height="22" uuid="a5ed8aa4-721a-4058-a0a4-e1939bab0909"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font size="12"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{GIOTRA}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="267" y="0" width="137" height="22" uuid="1abd2095-83b2-411d-b39c-5081784e34f6"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font size="12"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{SOGIOTHUE}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="404" y="0" width="151" height="22" uuid="45f3d8c1-464d-41e3-bf5d-415612c56091"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font size="12"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$P{TIENTHUESAN}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<staticText>
+				<reportElement x="267" y="0" width="137" height="23" uuid="131a556c-34f8-4e94-8e4d-004d7b1b1baa"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Số giờ thuê]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="116" y="0" width="151" height="23" uuid="dd193b12-93fd-42ab-a0a8-c081722d05a7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Giờ trả]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="0" width="151" height="23" uuid="4394df60-9896-40e5-8255-a32276c20262"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Thành tiền]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="116" height="23" uuid="bc7c5b41-4bf0-4fad-8ba4-f5e311990b1d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sân thuê]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
